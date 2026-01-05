@@ -23,7 +23,12 @@ span{
 
 a{
     color: black;
-    font-weight: bold;
+    transition: .2s;
+}
+
+a:hover{
+    transform: scale(1.05);
+    font-weight: 600;
 }
 
 .section{
