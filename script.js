@@ -1,6 +1,7 @@
 const ModoDark = document.querySelector('.modo-dark');
 const langBtn = document.getElementById('langBtn');
 const langLabel = document.getElementById('langLabel');
+const btnPdf = document.getElementById('btnPdf');
 
 let moon = document.getElementById('moon');
 let sun = document.getElementById('sun');
@@ -14,7 +15,7 @@ const i18n = {
     dadosPessoais: "Dados Pessoais",
     cel: "Cel. / WhatsApp:",
     nasc: "Data de nascimento:",
-    nascData:"24/03/1994",
+    nascData: "24/03/1994",
     cidade: "Cidade:",
     portfolio: "Portfólio:",
     formacao: "Formação Acadêmica",
@@ -80,14 +81,16 @@ const i18n = {
     bootcamp1: "- Introdução à lógica de programação",
     bootcamp2: "- Introdução ao HTML, CSS e JavaScript - Nível básico",
     perito: "Perito Judicial",
-    tti: "Técnico em Transações Imobiliárias"
+    tti: "Técnico em Transações Imobiliárias",
+    baixarPdf: "Baixar PDF",
+    pdfHint: "Dica: na janela de impressão, selecione “Salvar como PDF”."
   },
 
   en: {
     dadosPessoais: "Personal Information",
     cel: "Phone / WhatsApp:",
     nasc: "Date of birth:",
-    nascData:"03/24/1994",
+    nascData: "03/24/1994",
     cidade: "City:",
     portfolio: "Portfolio:",
     formacao: "Education",
@@ -153,16 +156,18 @@ const i18n = {
     bootcamp1: "- Introduction to programming logic",
     bootcamp2: "- Intro to HTML, CSS and JavaScript (basic)",
     perito: "Court Expert (Perito Judicial)",
-    tti: "Real Estate Transactions Technician"
+    tti: "Real Estate Transactions Technician",
+    baixarPdf: "Download PDF",
+    pdfHint: "Tip: in the print window, choose “Save as PDF”."
   }
 };
 
 // Dark mode
 ModoDark.addEventListener('click', () => {
-  toogleDarkMode();
+  toggleDarkMode();
 });
 
-function toogleDarkMode(){
+function toggleDarkMode(){
   moon.classList.toggle('hide');
   sun.classList.toggle('hide');
   ModoDark.classList.toggle('dark');
@@ -178,7 +183,7 @@ langBtn.addEventListener('click', () => {
   langMode = (langMode === 'pt') ? 'en' : 'pt';
   applyLanguage(langMode);
 
-  // label mostra o "próximo" idioma que você vai alternar
+  // label mostra o "próximo" idioma
   langLabel.textContent = (langMode === 'pt') ? 'EN' : 'PT-BR';
   document.documentElement.lang = (langMode === 'pt') ? 'pt-br' : 'en';
 });
@@ -188,12 +193,15 @@ function applyLanguage(lang){
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (!dict[key]) return;
-
-    // alguns textos têm <br> e precisam de HTML
     el.innerHTML = dict[key];
   });
 }
 
-// inicia em PT (garantia)
+// ✅ Botão Baixar PDF (offline, nativo)
+btnPdf.addEventListener('click', () => {
+  window.print();
+});
+
+// inicia em PT
 applyLanguage('pt');
 langLabel.textContent = 'EN';

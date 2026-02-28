@@ -38,10 +38,14 @@
             <div class="section dados-pessoais">
                 <h2 data-i18n="dadosPessoais">Dados Pessoais</h2>
                 <p><span data-i18n="cel">Cel. / WhatsApp:</span> <a href="https://wa.me/5511991802508">+55 (11) 99180-2508</a></p>
+
+                <!-- ✅ Data com i18n -->
                 <p>
                     <span data-i18n="nasc">Data de nascimento:</span>
                     <span data-i18n="nascData" class="data">24/03/1994</span>
-                </p>                <p><span data-i18n="cidade">Cidade:</span> Guarulhos/SP</p>
+                </p>
+
+                <p><span data-i18n="cidade">Cidade:</span> Guarulhos/SP</p>
                 <p><span>GitHub: </span><a href="https://github.com/Lillnard" target="_blank"> https://github.com/Lillnard</a></p>
                 <p><span data-i18n="portfolio">Portfólio: </span><a href="https://lillnard.github.io/portfolio/" target="_blank"> https://lillnard.github.io/portfolio/</a></p>
                 <p><span>LinkedIn: </span><a href="https://www.linkedin.com/in/leofonseca0" target="_blank"> https://www.linkedin.com/in/leofonseca0</a></p>
@@ -157,6 +161,18 @@
             <p class="section"><span data-i18n="perito">Perito Judicial</span> (<span data-i18n="concluidoEm">Concluído em</span> 06/2018)</p>
             <p><span data-i18n="tti">Técnico em Transações Imobiliárias</span> (<span data-i18n="concluidoEm">Concluído em</span> 03/2018)</p>
         </div><!--cursos  -->
+
+        <!-- ✅ Botão no final -->
+        <div class="pdf-area">
+            <button class="btn-pdf" id="btnPdf" type="button">
+                <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i>
+                <span data-i18n="baixarPdf">Baixar PDF</span>
+            </button>
+            <p class="pdf-hint" data-i18n="pdfHint">
+                Dica: na janela de impressão, selecione “Salvar como PDF”.
+            </p>
+        </div>
+
     </div><!-- container -->
 
     <script src="script.js"></script>

@@ -56,7 +56,7 @@ p{
     font-size: 20px;
 }
 
-.data {
+.data{
     font-weight: 300;
 }
 
@@ -152,6 +152,71 @@ p{
     margin-top: -35px;
 }
 
+/* ✅ Área do PDF */
+.pdf-area{
+    padding: 25px 0 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-pdf{
+    border: none;
+    cursor: pointer;
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    background: #000000;
+    color: #ffffff;
+    box-shadow: 0px 2px 6px rgba(0,0,0,.25);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: .2s;
+}
+
+.btn-pdf:hover{
+    transform: scale(1.02);
+}
+
+.container.dark .btn-pdf{
+    background: #ffffff;
+    color: #000000;
+}
+
+.pdf-hint{
+    font-size: 14px;
+    opacity: .8;
+    text-align: center;
+}
+
+/* ✅ Estilo de impressão (PDF) */
+@media print{
+    body{
+        background: #ffffff !important;
+    }
+
+    .container{
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+    }
+
+    /* esconde botões no PDF */
+    .top-actions,
+    .pdf-area{
+        display: none !important;
+    }
+
+    a{
+        text-decoration: none !important;
+        color: #000000 !important;
+    }
+}
+
 @media screen and (max-width: 500px){
 
     .container{
@@ -187,5 +252,15 @@ p{
     
     p{
         font-size: 15px;
+    }
+
+    .btn-pdf{
+        font-size: 15px;
+        padding: 10px 14px;
+        border-radius: 10px;
+    }
+
+    .pdf-hint{
+        font-size: 12px;
     }
 }
