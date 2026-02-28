@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-
     <script src="https://kit.fontawesome.com/2021d3515c.js" crossorigin="anonymous"></script>
 
     <meta charset="UTF-8">
@@ -19,8 +18,14 @@
 <body>
     <div class="container">
 
-        <div class="dark-container">
-            <div class="modo-dark">
+        <div class="top-actions">
+            <!-- Botão idioma -->
+            <div class="modo-idioma" id="langBtn" title="Trocar idioma" aria-label="Trocar idioma">
+                <span class="lang-label" id="langLabel">EN</span>
+            </div>
+
+            <!-- Botão dark -->
+            <div class="modo-dark" title="Modo escuro" aria-label="Alternar modo escuro">
                 <i class="fa-solid fa-moon" id="moon"></i>
                 <i class="fa-solid fa-sun hide" id="sun"></i>
             </div>
@@ -28,112 +33,129 @@
 
         <header class="nome">
             <h1>Leonardo Gomes Fonseca</h1>    
-        
-        <hr>
-    
-            <div class="section dados-pessoais">
-                <h2>Dados Pessoais</h2>
-                <p><span>Cel. / WhatsApp:</span> (11) 91280-9687</p>
-                <p><span>Data de nascimento:</span> 24/03/1994</p>
-                <p><span>Cidade:</span> Guarulhos</p>
-                <p><span>GitHub:</span><a href="https://github.com/Lillnard" target="_blank"> https://github.com/Lillnard</a></p>
-                <p><span>Portfólio:</span><a href="https://lillnard.github.io/portfolio/" target="_blank"> https://lillnard.github.io/portfolio/</a></p>
-                <p><span>LinkedIn:</span><a href="https://www.linkedin.com/in/leofonseca0" target="_blank"> https://www.linkedin.com/in/leofonseca0</a></p>
+            <hr>
 
+            <div class="section dados-pessoais">
+                <h2 data-i18n="dadosPessoais">Dados Pessoais</h2>
+                <p><span data-i18n="cel">Cel. / WhatsApp:</span> +55(11) 91280-9687</p>
+                <p><span data-i18n="nasc">Data de nascimento:</span> 24/03/1994</p>
+                <p><span data-i18n="cidade">Cidade:</span> Guarulhos</p>
+                <p><span>GitHub:</span><a href="https://github.com/Lillnard" target="_blank"> https://github.com/Lillnard</a></p>
+                <p><span data-i18n="portfolio">Portfólio:</span><a href="https://lillnard.github.io/portfolio/" target="_blank"> https://lillnard.github.io/portfolio/</a></p>
+                <p><span>LinkedIn:</span><a href="https://www.linkedin.com/in/leofonseca0" target="_blank"> https://www.linkedin.com/in/leofonseca0</a></p>
             </div><!-- dados pessoais -->
         </header><!-- nome -->
+
         <hr>
-    
+
         <div class="section formacao-academica">
-            <h2>Formação Acadêmica</h2>
-            <p><span>Universidade Estácio</span></p>
-            <p>Análise e Desenvolvimento de Sistemas - Cursando</p>
+            <h2 data-i18n="formacao">Formação Acadêmica</h2>
+            <p><span data-i18n="estacio">Universidade Estácio</span></p>
+            <p data-i18n="ads">Análise e Desenvolvimento de Sistemas - Cursando</p>
         </div><!-- formacao-academica -->
+
         <hr>
-    
+
         <div class="section resumo-profissional">
-            <h2>Resumo Profissional</h2>
-            <p>Profissional em transição de carreira para a área de tecnologia, cursando Análise e Desenvolvimento de Sistemas, com foco em desenvolvimento web e backend. Possuo conhecimento em Power BI, Python, JavaScript, Angular, TypeScript, HTML e CSS, além de conhecimentos em bancos de dados SQL e NoSQL. Trago forte bagagem em resolução de problemas, organização de processos e trabalho em equipe, adquirida ao longo de mais de 15 anos de experiência profissional</p><br>
+            <h2 data-i18n="resumo">Resumo Profissional</h2>
 
-            <p><span>Principais Competências:</span> Facilidade de aprendizado, comprometimento, boa comunicação, adaptabilidade, raciocínio rápido, pensamento lógico e resolução de problemas.</p>
+            <p data-i18n="resumoTxt">
+                Profissional com mais de 15 anos de carreira, com experiência em trabalho em equipe, organização de processos e resolução de problemas. <br><br>
+                Em transição de carreira para a área da tecnologia, atualmente estou cursando Análise e Desenvolvimento de Sistemas (ADS), com foco em desenvolvimento web e backend. <br><br>
+                Possuo conhecimento em HTML, CSS e JavaScript, Power BI, Python e bancos de dados SQL e NoSQL.
+            </p>
+            <br>
+
+            <p>
+                <span data-i18n="principaisCompetencias">Principais Competências:</span>
+                <span data-i18n="competenciasTxt">
+                    Facilidade de aprendizado, responsabilidade, comprometimento, boa comunicação, criatividade, inteligência emocional, adaptabilidade, raciocínio rápido, pensamento lógico, tomada de decisão e resolução de problemas.
+                </span>
+            </p>
         </div><!-- resumo-profissional -->
+
         <hr>
-    
+
         <div class="section objetivo-profissional">
-            <h2>Objetivo Profissional</h2>
-            <p>Iniciar minha carreira na área de desenvolvimento web, em nível júnior ou estágio, colocando em prática meus conhecimentos acadêmicos, adquirindo e desenvolvendo as minhas habilidades técnicas e contribuindo para o crescimento da equipe e da empresa.</p>
+            <h2 data-i18n="objetivo">Objetivo Profissional</h2>
+            <p data-i18n="objetivoTxt">
+                Iniciar minha carreira na área de desenvolvimento web, colocando em prática meus conhecimentos acadêmicos,
+                adquirindo e desenvolvendo as minhas habilidades técnicas e contribuindo para o crescimento da equipe e da empresa.
+            </p>
         </div><!-- objetivo-profissional -->
+
         <hr>
 
         <div class="section experiencia-profissional">
-            <h2>Experiência Profissional</h2>
-            <p><span>OPERLOG - LOGÍSTICA E TRANSPORTE (05/2024 - ATUALMENTE)</span></p>
-            <p><span>Cargo:</span> Líder Operacional</p><br>
+            <h2 data-i18n="experiencia">Experiência Profissional</h2>
 
-            <p>- Liderança e organização de equipe operacional, com foco em padronização de processos, análise de indicadores e melhoria contínua</p>
-            <p>- Acompanhamento de processos de recebimento, armazenagem, separação e expedição de mercadorias</p>
-            <p>- Garantia do cumprimento de normas de segurança, organização do ambiente de trabalho e boas práticas operacionais</p>
-            <p>- Comunicação constante com diferentes áreas, garantindo alinhamento de demandas, prazos e prioridades</p>
-        </div><!-- experiencia-profissiona -->
+            <p><span data-i18n="operlogEmpresa">OPERLOG - LOGÍSTICA E TRANSPORTE (05/2024 - ATUALMENTE)</span></p>
+            <p><span data-i18n="cargo">Cargo:</span> <span data-i18n="cargoOperlog">Líder Operacional</span></p><br>
+
+            <p data-i18n="operlog1">- Liderança e organização de equipe operacional, com foco em padronização de processos, análise de indicadores e melhoria contínua</p>
+            <p data-i18n="operlog2">- Acompanhamento de processos de recebimento, armazenagem, separação e expedição de mercadorias</p>
+            <p data-i18n="operlog3">- Garantia do cumprimento de normas de segurança, organização do ambiente de trabalho e boas práticas operacionais</p>
+            <p data-i18n="operlog4">- Comunicação constante com diferentes áreas, garantindo alinhamento de demandas, prazos e prioridades</p>
+        </div>
 
         <div class="section experiencia-profissional">
-            <p><span>HOME FAST IMÓVEIS (06/2018 - 02/2024)</span></p>
-            <p><span>Cargo:</span> Corretor Imobiliário</p><br>
+            <p><span data-i18n="homefastEmpresa">HOME FAST IMÓVEIS (06/2018 - 02/2024)</span></p>
+            <p><span data-i18n="cargo">Cargo:</span> <span data-i18n="cargoHomefast">Corretor Imobiliário</span></p><br>
 
-            <p>- Prospecção de imóveis e clientes</p>
-            <p>- Atendimento consultivo, a fim de entender e analisar a necessidade de cada cliente</p>
-            <p>- Organização, padronização e manutenção de informações de imóveis, contratos e clientes</p>
-            <p>- Acompanhamento de processos ponta a ponta, garantindo cumprimento de prazos e qualidade nas entregas</p>
-            <p><span>Competências desenvolvidas:</span> Análise de requisitos, organização de dados e informações, comunicação assertiva, foco em experiência do cliente, gestão de processos e prazos</p>
-        </div><!-- experiencia-profissiona -->
-    
+            <p data-i18n="home1">- Prospecção de imóveis e clientes</p>
+            <p data-i18n="home2">- Atendimento consultivo, a fim de entender e analisar a necessidade de cada cliente</p>
+            <p data-i18n="home3">- Organização, padronização e manutenção de informações de imóveis, contratos e clientes</p>
+            <p data-i18n="home4">- Acompanhamento de processos ponta a ponta, garantindo cumprimento de prazos e qualidade nas entregas</p>
+            <p><span data-i18n="competenciasDesenv">Competências desenvolvidas:</span> <span data-i18n="homeComp">Análise de requisitos, organização de dados e informações, comunicação assertiva, foco em experiência do cliente, gestão de processos e prazos</span></p>
+        </div>
+
         <div class="section experiencia-profissional">
-            <p><span>CÓDIGO IMÓVEIS (01/2008 - 06/2018)</span></p>
-            <p><span>Cargos:</span> Office-boy, Auxiliar Administrativo e Corretor Imobiliário </p><br>
-            <p>- Cadastro, atualização e organização de dados de imóveis em sistemas internos e site da empresa</p>
-            <p>- Apoio administrativo, controle de informações, documentos e contratos</p>
-            <p>- Atendimento ao cliente e suporte na resolução de demandas e dúvidas</p>
-            <p>- Realização de vistorias técnicas e registro de informações operacionais</p>
-            <p><span>Competências desenvolvidas:</span> Organização, atenção aos detalhes, documentação de processos, atendimento ao cliente, controle de informações</p>
-        </div><!-- experiencia-profissional -->
+            <p><span data-i18n="codigoEmpresa">CÓDIGO IMÓVEIS (01/2008 - 06/2018)</span></p>
+            <p><span data-i18n="cargos">Cargos:</span> <span data-i18n="cargoCodigo">Office-boy, Auxiliar Administrativo e Corretor Imobiliário</span></p><br>
+
+            <p data-i18n="cod1">- Cadastro, atualização e organização de dados de imóveis em sistemas internos e site da empresa</p>
+            <p data-i18n="cod2">- Apoio administrativo, controle de informações, documentos e contratos</p>
+            <p data-i18n="cod3">- Atendimento ao cliente e suporte na resolução de demandas e dúvidas</p>
+            <p data-i18n="cod4">- Realização de vistorias técnicas e registro de informações operacionais</p>
+            <p><span data-i18n="competenciasDesenv">Competências desenvolvidas:</span> <span data-i18n="codComp">Organização, atenção aos detalhes, documentação de processos, atendimento ao cliente, controle de informações</span></p>
+        </div>
+
         <hr>
-    
+
         <div class="section cursos">
-            <h2>Cursos e Certificações</h2>
-        
-            <p class="section"><span>Bradesco - GenAI & Dados</span> (Cursando)</p>
-            <p>- Python para analisar e organizar dados, usando inteligência artificial generativa, SQL, Excel, Power Query e Microsoft Copilot
+            <h2 data-i18n="cursos">Cursos e Certificações</h2>
 
-            <p class="section"><span>VIVO: Python A.I. BackEnd Developer</span> (Concluído em 06/2024)</p>
-            <p>- Introdução à linguagem de programação PYTHON - Nível intermediário</p>
-            <p>- Utilização dos frameworks FastAPI e LangChain</p>
-            <p>- Desenvolvimento de APIs com FastAPI, Python e Docker</p>
-            <p>- Introdução aos pilares da Inteligência Artificial</p>
-        
-            <p class="section"><span>Python Data Analytics </span>(Concluído em 04/2024)</p>
-            <p>- Introdução à linguagem de programação Python - Nível básico</p>
-            <p>- SQL e NoSQL</p>
-            <p>- Análise de dados com Power BI</p>
-            <p>- Fundamentos e técnicas de Machine Learning</p>
-        
-            <p class="section"><span>Desenvolvimento front-end com Angular </span>(Concluído em 02/2024)</p>
-            <p>- Fundamentos do framework Angular</p>
-            <p>- Utilização das linguagens JavaScript e TypeScript - Nível avançado</p>
-            
-            <p class="section"><span>Desenvolvimento de Jogos </span>(Concluído em 12/2023)</p>
-            <p>- Princípios do desenvolvimento de jogos</p>
-            <p>- Utilização de HTML, CSS e JavaScript - Nível intermediário</p>
-        
-            <p class="section"><span>Bootcamp Programação do Zero </span>(Concluído em 10/2023)</p>
-            <p>- Introdução à lógica de programação</p>
-            <p>- Introdução ao HTML, CSS e JavaScript - Nível básico</p>
-        
-            <p class="section"><span>Perito Judicial </span>(Concluído em 06/2018)</p>
-            
-            <p><span>Técnico em Transações Imobiliárias </span>(Concluído em 03/2018)</p>    
+            <p class="section"><span data-i18n="bradesco">Bradesco - GenAI & Dados</span> (<span data-i18n="cursando">Cursando</span>)</p>
+            <p data-i18n="bradescoTxt">- Python para analisar e organizar dados, usando inteligência artificial generativa, SQL, Excel, Power Query e Microsoft Copilot</p>
+
+            <p class="section"><span data-i18n="vivo">VIVO: Python A.I. BackEnd Developer</span> (<span data-i18n="concluidoEm">Concluído em</span> 06/2024)</p>
+            <p data-i18n="vivo1">- Introdução à linguagem de programação Python - Nível intermediário</p>
+            <p data-i18n="vivo2">- Utilização dos frameworks FastAPI e LangChain</p>
+            <p data-i18n="vivo3">- Desenvolvimento de APIs com FastAPI, Python e Docker</p>
+            <p data-i18n="vivo4">- Introdução aos pilares da Inteligência Artificial</p>
+
+            <p class="section"><span data-i18n="pda">Python Data Analytics</span> (<span data-i18n="concluidoEm">Concluído em</span> 04/2024)</p>
+            <p data-i18n="pda1">- Introdução à linguagem de programação Python - Nível básico</p>
+            <p data-i18n="pda2">- SQL e NoSQL</p>
+            <p data-i18n="pda3">- Análise de dados com Power BI</p>
+            <p data-i18n="pda4">- Fundamentos e técnicas de Machine Learning</p>
+
+            <p class="section"><span data-i18n="angular">Desenvolvimento front-end com Angular</span> (<span data-i18n="concluidoEm">Concluído em</span> 02/2024)</p>
+            <p data-i18n="angular1">- Fundamentos do framework Angular</p>
+            <p data-i18n="angular2">- Utilização das linguagens JavaScript e TypeScript - Nível avançado</p>
+
+            <p class="section"><span data-i18n="jogos">Desenvolvimento de Jogos</span> (<span data-i18n="concluidoEm">Concluído em</span> 12/2023)</p>
+            <p data-i18n="jogos1">- Princípios do desenvolvimento de jogos</p>
+            <p data-i18n="jogos2">- Utilização de HTML, CSS e JavaScript - Nível intermediário</p>
+
+            <p class="section"><span data-i18n="bootcamp">Bootcamp Programação do Zero</span> (<span data-i18n="concluidoEm">Concluído em</span> 10/2023)</p>
+            <p data-i18n="bootcamp1">- Introdução à lógica de programação</p>
+            <p data-i18n="bootcamp2">- Introdução ao HTML, CSS e JavaScript - Nível básico</p>
+
+            <p class="section"><span data-i18n="perito">Perito Judicial</span> (<span data-i18n="concluidoEm">Concluído em</span> 06/2018)</p>
+            <p><span data-i18n="tti">Técnico em Transações Imobiliárias</span> (<span data-i18n="concluidoEm">Concluído em</span> 03/2018)</p>
         </div><!--cursos  -->
     </div><!-- container -->
-
 
     <script src="script.js"></script>
 </body>
