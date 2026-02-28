@@ -56,6 +56,10 @@ p{
     font-size: 20px;
 }
 
+.data {
+    font-weight: 300;
+}
+
 .dados-pessoais p{
     line-height: 30px;
 }
