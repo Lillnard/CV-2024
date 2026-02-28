@@ -1,7 +1,9 @@
+// script.js
 const ModoDark = document.querySelector('.modo-dark');
 const langBtn = document.getElementById('langBtn');
 const langLabel = document.getElementById('langLabel');
 const btnPdf = document.getElementById('btnPdf');
+const btnPdfTop = document.getElementById('btnPdfTop');
 
 let moon = document.getElementById('moon');
 let sun = document.getElementById('sun');
@@ -197,10 +199,13 @@ function applyLanguage(lang){
   });
 }
 
-// ✅ Botão Baixar PDF (offline, nativo)
-btnPdf.addEventListener('click', () => {
+// ✅ PDF (topo e final) - offline/nativo
+function printPdf(){
   window.print();
-});
+}
+
+btnPdf.addEventListener('click', printPdf);
+btnPdfTop.addEventListener('click', printPdf);
 
 // inicia em PT
 applyLanguage('pt');

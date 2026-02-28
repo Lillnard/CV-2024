@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -18,16 +19,26 @@
 <body>
     <div class="container">
 
-        <div class="top-actions">
-            <!-- Botão idioma -->
-            <div class="modo-idioma" id="langBtn" title="Trocar idioma" aria-label="Trocar idioma">
-                <span class="lang-label" id="langLabel">EN</span>
+        <!-- ✅ NOVA BARRA DE AÇÕES (não disputa espaço com o nome) -->
+        <div class="actions-bar" aria-label="Ações do currículo">
+            <div class="actions-left">
+                <button class="btn-pdf-top" id="btnPdfTop" type="button" title="Baixar PDF" aria-label="Baixar PDF">
+                    <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i>
+                    <span data-i18n="baixarPdf">Baixar PDF</span>
+                </button>
             </div>
 
-            <!-- Botão dark -->
-            <div class="modo-dark" title="Modo escuro" aria-label="Alternar modo escuro">
-                <i class="fa-solid fa-moon" id="moon"></i>
-                <i class="fa-solid fa-sun hide" id="sun"></i>
+            <div class="actions-right">
+                <!-- Botão idioma -->
+                <div class="modo-idioma" id="langBtn" title="Trocar idioma" aria-label="Trocar idioma">
+                    <span class="lang-label" id="langLabel">EN</span>
+                </div>
+
+                <!-- Botão dark -->
+                <div class="modo-dark" id="darkBtn" title="Modo escuro" aria-label="Alternar modo escuro">
+                    <i class="fa-solid fa-moon" id="moon"></i>
+                    <i class="fa-solid fa-sun hide" id="sun"></i>
+                </div>
             </div>
         </div>
 
@@ -39,7 +50,6 @@
                 <h2 data-i18n="dadosPessoais">Dados Pessoais</h2>
                 <p><span data-i18n="cel">Cel. / WhatsApp:</span> <a href="https://wa.me/5511991802508">+55 (11) 99180-2508</a></p>
 
-                <!-- ✅ Data com i18n -->
                 <p>
                     <span data-i18n="nasc">Data de nascimento:</span>
                     <span data-i18n="nascData" class="data">24/03/1994</span>
@@ -162,7 +172,7 @@
             <p><span data-i18n="tti">Técnico em Transações Imobiliárias</span> (<span data-i18n="concluidoEm">Concluído em</span> 03/2018)</p>
         </div><!--cursos  -->
 
-        <!-- ✅ Botão no final -->
+        <!-- ✅ Botão no final (mantido) -->
         <div class="pdf-area">
             <button class="btn-pdf" id="btnPdf" type="button">
                 <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i>
