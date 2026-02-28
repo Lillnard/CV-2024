@@ -85,7 +85,7 @@ p{
     color: #cccccc;
 }
 
-/* ✅ NOVA BARRA DE AÇÕES */
+/*BARRA DE AÇÕES */
 .actions-bar{
     display: flex;
     justify-content: space-between;
@@ -101,7 +101,7 @@ p{
     gap: 12px;
 }
 
-/* ✅ botão PDF do topo */
+/* botão PDF do topo */
 .btn-pdf-top{
     border: none;
     cursor: pointer;
@@ -188,7 +188,6 @@ p{
     margin-top: 0; /* ✅ não precisa mais puxar pra cima */
 }
 
-/* ✅ Área do PDF (final) */
 .pdf-area{
     padding: 25px 0 5px;
     display: flex;
@@ -228,7 +227,6 @@ p{
     text-align: center;
 }
 
-/* ✅ Estilo de impressão (PDF) */
 @media print{
     body{
         background: #ffffff !important;
@@ -261,7 +259,6 @@ p{
         margin: 20px auto;
     }
 
-    /* ✅ No mobile, a barra organiza bem sem esmagar o nome */
     .actions-bar{
         padding: 8px 0 12px;
         gap: 10px;
