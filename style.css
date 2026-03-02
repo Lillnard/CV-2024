@@ -85,6 +85,10 @@ p{
     color: #cccccc;
 }
 
+.competencias{
+    font-weight: 300;
+}
+
 /*BARRA DE AÇÕES */
 .actions-bar{
     display: flex;
